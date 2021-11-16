@@ -12,15 +12,14 @@ public class CompletableFutureTest_02 {
         long start,end;
 
         start = System.currentTimeMillis();
-        /**
-        CompletableFuture<Double> futureJD = CompletableFuture.supplyAsync(()->priceOfJD());
+
+        /*CompletableFuture<Double> futureJD = CompletableFuture.supplyAsync(()->priceOfJD());
         CompletableFuture<Double> futureTM = CompletableFuture.supplyAsync(()->priceOfTM());
         CompletableFuture<Double> futureTB = CompletableFuture.supplyAsync(()->priceOfTB());
          // 必须等三个结果都返回了才能往下运行
         CompletableFuture.allOf(futureJD,futureTB,futureTM).join();
         end = System.currentTimeMillis();
-        System.out.println("use completable future! " + (end-start));
-         */
+        System.out.println("use completable future! " + (end-start));*/
 
         CompletableFuture.supplyAsync(()-> priceOfTM()).thenApply(String::valueOf).thenApply(str -> "TM price:"+str).thenAccept(System.out::println);
         CompletableFuture.supplyAsync(()-> priceOfJD()).thenApply(String::valueOf).thenApply(str -> "JD price:"+str).thenAccept(System.out::println);
