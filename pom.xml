@@ -11,6 +11,7 @@
     <modules>
         <module>SpringWzy</module>
         <module>SPI</module>
+        <module>zkTest</module>
     </modules>
 
     <properties>

@@ -7,8 +7,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Spi-Core" />
+        <module name="Spi-Interface" />
+        <module name="Spi-Girl" />
+        <module name="Spi-Test" />
+        <module name="zkTest" />
+        <module name="Spi-Boy" />
         <module name="SpringWzy" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spi-boy" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
