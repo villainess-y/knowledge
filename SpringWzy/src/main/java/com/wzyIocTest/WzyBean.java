@@ -1,4 +1,5 @@
-package com.villainess;
+package com.wzyIocTest;
+
 
 import org.springframework.beans.factory.InitializingBean;
 
@@ -11,10 +12,10 @@ public class WzyBean implements InitializingBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.out.println("Villainess Bean afterProperties set...");
+        System.out.println("WzyBean Bean afterProperties set...");
     }
 
     public WzyBean() {
-        System.out.println("villainess Bean 构造器。。");
+        System.out.println("WzyBean Bean 构造器。。");
     }
 }

@@ -1,4 +1,4 @@
-package com.villainess;
+package com.wzyIocTest;
 
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -12,8 +12,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class SpringWzyIocTest {
 
 
-    @Test
-    public void testIoc(){
+    public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
         WzyBean myBean = applicationContext.getBean(WzyBean.class);
         System.out.println(myBean);

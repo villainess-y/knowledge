@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="
-http://www.springframework.org/schema/beans
-https://www.springframework.org/schema/beans/spring-beans.xsd
+	    http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd
 ">
-    <bean id="wzyBean" class="com.villainess.WzyBean"/>
-    <bean id="myBeanFactoryPostProcessor" class="com.villainess.MyBeanFactoryPostProcessor"/>
-    <bean id="myBeanPostProcessor" class="com.villainess.MyBeanPostProcessor"/>
+    <bean id="wzyBean" class="com.wzyIocTest.WzyBean"/>
+    <bean id="myBeanFactoryPostProcessor" class="com.wzyIocTest.MyBeanFactoryPostProcessor"/>
+    <bean id="myBeanPostProcessor" class="com.wzyIocTest.MyBeanPostProcessor"/>
+
+
+<!--    &lt;!&ndash;aop配置&ndash;&gt;-->
+<!--    <aop:aspectj-autoproxy/>-->
+<!--    &lt;!&ndash;横切逻辑&ndash;&gt;-->
+<!--    <bean id="logUtils" class="com.lagou.edu.LogUtils">-->
+<!--    </bean>-->
+
+<!--    <aop:config>-->
+<!--        <aop:aspect ref="logUtils">-->
+<!--            <aop:before method="beforeMethod" pointcut="execution(public void com.lagou.edu.LagouBean.print())"/>-->
+<!--        </aop:aspect>-->
+<!--    </aop:config>-->
 </beans>
