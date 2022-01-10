@@ -40,14 +40,21 @@ public class PSTest {
         this.success = success;
     }
 
-    public static void main(String[] args) {
+    public static int test(){
+        int[] arr = new int[1];
+        try {
+            arr[0] = 1;
+            return arr[0];
+        }catch (Exception e){
 
-        PSTest a = new PSTest(1,null);
-        if(a.getSuccess()){
-            System.out.println("111");
-        }else {
-            System.out.println("222");
+        }finally {
+            arr[0] = 2;
+            return arr[0];
         }
+    }
 
+    public static void main(String[] args) throws InterruptedException {
+
+        System.out.println(test());
     }
 }
