@@ -28,13 +28,13 @@ public class ListNode {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         StringBuilder sb = new StringBuilder();
         ListNode root = this;
-        while (root != null){
+        while (root != null) {
             sb.append(root.val + " ---> ");
             root = root.next;
         }
-        return sb.substring(0,sb.length()-6);
+        return sb.substring(0, sb.length() - 6);
     }
 }
